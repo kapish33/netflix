@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    /* Base Options: */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "checkJs": true,
+
+    /* Bundled projects */
+    "lib": ["dom", "dom.iterable", "ES2022"],
+    "noEmit": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "preserve",
+    "plugins": [{ "name": "next" }],
+    "incremental": true,
+
+    /* Path Aliases */
+    "baseUrl": ".",
+    "paths": {
+      // ** This order is Specific for SRC folder and order is in such a way that Prefect one is picked first thats why i had shifted @/ at last line
+      "@types/*": ["src/types/*"], // For Type Script types
+      "@components/*": ["src/components/*"], // For React components
+      "@hooks/*": ["src/hooks/*"], // For React hooks
+      "@utils/*": ["src/utils/*"], // For Utility functions
+      "@styles/*": ["src/styles/*"], // For SCSS files
+      "@/*": ["src/*"] // If Nothing Above Works the this will work : )
+    }
+  },
+  "include": [
+    ".eslintrc.cjs",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.cjs",
+    "**/*.js",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}

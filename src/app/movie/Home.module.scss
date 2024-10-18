@@ -1,0 +1,46 @@
+@import '../../styles/themes.contant'; 
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: $primary; 
+}
+
+.movieList {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 20px; 
+}
+
+.movieCard {
+  background-color: $secondary; 
+  border-radius: 8px; 
+  overflow: hidden;
+  text-align: center;
+  transition: transform $transition-duration, box-shadow $transition-duration;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-bottom: 4px solid $primary;
+    transition: transform $transition-duration;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  h3 {
+    margin: 16px 0;
+    color: $text;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+}

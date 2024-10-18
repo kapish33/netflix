@@ -1,0 +1,85 @@
+@import '@styles/themes.contant';
+
+.movieDetails {
+  display: flex;
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: $secondary;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform $transition-duration;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  .goBackIcon {
+    cursor: pointer;
+    padding: 10px;
+    color: $primary;
+    background-color: $background;
+
+    svg {
+      transition: color $transition-duration;
+    }
+
+    &:hover svg {
+      color: darken($primary, 10%);
+    }
+  }
+
+  img {
+    border-right: 4px solid $primary;
+    width: 100%;
+    height: auto;
+  }
+
+  .movieInfo {
+    padding: 20px;
+    color: $text;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 10px;
+      color: $primary;
+    }
+
+    p {
+      margin: 8px 0;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    strong {
+      color: $primary;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .movieDetails {
+    flex-direction: column;
+    max-width: 100%;
+    border-radius: 0;
+
+    img {
+      border-right: none;
+      border-bottom: 4px solid $primary;
+    }
+
+    .movieInfo {
+      padding: 15px;
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

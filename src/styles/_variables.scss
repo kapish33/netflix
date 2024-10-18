@@ -1,0 +1,22 @@
+// styles/_variables.scss
+
+// Container Padding
+$container-padding: 16px;
+
+// General Padding and Margin Sizes
+$spacing: (
+  0: 0,
+  2: 4px,
+  3: 8px,
+  4: 16px,
+  5: 32px,
+);
+
+// Breakpoints
+$breakpoints: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  '2xl': 1536px,
+);
