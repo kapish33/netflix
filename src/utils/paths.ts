@@ -3,7 +3,7 @@ import { masterUrl } from "@utils/greedy";
 
 export const Home: Path = {
     path: '/',
-    name: process.env.NEXT_PUBLIC_APP_NAME as string,
+    name: process.env.NEXT_PUBLIC_APP_NAME ?? "NetFlix",
     "aria-label": "Home",
 };
 
