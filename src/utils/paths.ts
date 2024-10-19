@@ -34,7 +34,7 @@ const PrivacyPolicy: Path = {
 };
 
 const TermsOfService: Path = {
-    path: "/terms-of-service",
+    path: masterUrl,
     name: "Terms of Service",
     "aria-label": "Terms of Service",
 };
