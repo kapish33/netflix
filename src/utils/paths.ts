@@ -1,6 +1,8 @@
 import { type Path } from "@/types/path";
 import { masterUrl } from "@utils/greedy";
 
+export const BasePath = new URL(process.env.DOMAIN ?? "https://netflix-ashy-zeta.vercel.app");
+
 export const Home: Path = {
     path: '/',
     name: process.env.NEXT_PUBLIC_APP_NAME ?? "NetFlix",

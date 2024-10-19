@@ -2,6 +2,24 @@ import Link from 'next/link';
 import styles from './Home.module.scss';
 import { fetchMovies } from '@utils/omdb';
 import Image from 'next/image';
+import { Metadata } from 'next';
+import { BasePath } from '@utils/paths';
+
+export const metadata: Metadata = {
+  title: 'Movie List',
+  description: 'List of movies',
+  metadataBase: BasePath,
+  keywords: 'movie, list, netflix, movies',
+  referrer: 'origin-when-cross-origin',
+  alternates: {
+    canonical: "/movie",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+}
+
 
 export default async function HomePage() {
   const movies = await fetchMovies();

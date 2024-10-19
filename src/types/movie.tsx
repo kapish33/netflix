@@ -9,4 +9,8 @@ export type MovieDetailsType = {
   Poster: string;
   Plot: string;
   imdbRating: string;
+  imdbID: string;
+  Genre: string;
+  Actors: string;
 };
+ 
