@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styles from './Home.module.scss';
 import { fetchMovies } from '@utils/omdb';
 import Image from 'next/image';
-import { Metadata } from 'next';
+import { type Metadata } from 'next';
 import { BasePath } from '@utils/paths';
 
 export const metadata: Metadata = {

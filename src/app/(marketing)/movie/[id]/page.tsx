@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { fetchMovie } from "@utils/omdb";
 import MovieDetails from "@components/MovieDetails";
-import { Metadata } from "next";
+import { type Metadata } from "next";
 import { BasePath } from "@utils/paths";
 
 export async function generateMetadata({

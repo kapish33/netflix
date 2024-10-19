@@ -1,6 +1,6 @@
 import { fetchMovies } from '@utils/omdb';
 import { BasePath } from '@utils/paths';
-import { MetadataRoute } from 'next';
+import { type MetadataRoute } from 'next';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Fetch the array of movies
