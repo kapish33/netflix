@@ -1,8 +1,14 @@
 import { notFound } from "next/navigation";
 import { fetchMovie } from "@utils/omdb";
-import MovieDetails from "@components/MovieDetails";
+import dynamic from "next/dynamic";
 import { type Metadata } from "next";
 import { BasePath } from "@utils/paths";
+
+// Dynamically import MovieDetails component
+const MovieDetails = dynamic(() => import("@components/MovieDetails"), {
+  loading: () => <p>Loading movie details...</p>, // Optional loading component
+  ssr: true, // Disable server-side rendering if appropriate
+});
 
 export async function generateMetadata({
   params,
@@ -43,13 +49,11 @@ export async function generateMetadata({
       description: Plot,
       images: [Poster],
     },
-    // canonical URL
     metadataBase: BasePath,
     alternates: {
       canonical: `/movie/${imdbID}`,
     },
     referrer: "origin-when-cross-origin",
-
     robots: {
       index: true,
       follow: true,
@@ -64,7 +68,8 @@ export default async function MovieDetailsPage({
 }) {
   const movie = await fetchMovie(params.id);
 
-  if (!movie) return notFound(); // Either return 404 or custom error page
+  if (!movie) return notFound(); // Return 404 or custom error page
 
+  // Render MovieDetails dynamically
   return <MovieDetails movie={movie} />;
 }

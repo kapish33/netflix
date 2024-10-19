@@ -19,22 +19,28 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-}
-
+};
 
 export default async function HomePage() {
   const movies = await fetchMovies();
 
-  if(!movies.length) return <div>No Movies Found</div>
+  if (!movies.length) return <div>No Movies Found</div>;
 
   return (
     <div className='container my-2'>
       <div className={styles.movieList}>
-        {movies.map((movie,index) => (
+        {movies.map((movie, index) => (
           <Link key={movie.imdbID} href={`/movie/${movie.imdbID}`}>
             <div className={styles.movieCard}>
-            <Image height={300} width={450} src={movie.Poster} alt={movie.Title} blurDataURL={blurDataImage} loading={index < 3 ? 'eager' : 'lazy'} />
-            <h3>{movie.Title}</h3>
+              <Image
+                height={300}
+                width={450}
+                src={movie.Poster}
+                alt={`Poster of ${movie.Title} movie`}
+                blurDataURL={blurDataImage}
+                loading={index < 3 ? 'eager' : 'lazy'}
+              />
+              <h3>{movie.Title}</h3>
             </div>
           </Link>
         ))}
