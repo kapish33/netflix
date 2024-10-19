@@ -1,0 +1,53 @@
+@import '../../../styles/themes.contant'; 
+
+
+.aboutUs {
+    background-color: #f9f9f9; // Light background
+    padding: 50px 20px;
+    text-align: center;
+  
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+  
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: $primary; // Primary color (imported from theme if used)
+    }
+  
+    p {
+      font-size: 1.125rem;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+  
+    h2 {
+      font-size: 2rem;
+      margin: 30px 0 10px;
+      color: $secondary; // Secondary color
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0 0 20px;
+  
+      li {
+        font-size: 1.125rem;
+        margin: 10px 0;
+        color: #555;
+      }
+    }
+  
+    strong {
+      color: $primary; // Emphasizing the app name
+    }
+  }
+  

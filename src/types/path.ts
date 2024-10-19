@@ -4,3 +4,4 @@ export type Path ={
     name: string;
     "aria-label": string;
 }
+

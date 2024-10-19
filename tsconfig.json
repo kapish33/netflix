@@ -31,6 +31,7 @@
       "@components/*": ["src/components/*"], // For React components
       "@hooks/*": ["src/hooks/*"], // For React hooks
       "@utils/*": ["src/utils/*"], // For Utility functions
+      "@const/*": ["src/const/*"], // For Constants,
       "@styles/*": ["src/styles/*"], // For SCSS files
       "@/*": ["src/*"] // If Nothing Above Works the this will work : )
     }

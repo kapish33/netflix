@@ -10,7 +10,7 @@ export const Home: Path = {
 };
 
 const About: Path = {
-    path: masterUrl,
+    path: 'about-us',
     name: "About",
     "aria-label": "About",
 };
